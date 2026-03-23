@@ -1,0 +1,14 @@
+version: 0.1
+component: build
+timeoutInSeconds: 6000
+shell: bash
+
+steps:
+  - type: Command
+    name: "Install dependencies"
+    command: |
+      echo "Starting build..."
+outputArtifacts:
+  - name: my_app_output
+    type: BINARY
+    location: ${OCI_PRIMARY_SOURCE_DIR}/Jenkinsfile.php
